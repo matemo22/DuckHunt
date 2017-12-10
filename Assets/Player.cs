@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 	[SerializeField]
 	private Stat health;
+	[SerializeField]
+	private GameObject GameOver;
 
 	private void Awake()
 	{
@@ -18,6 +20,9 @@ public class Player : MonoBehaviour {
 		}
 		if (Input.GetKeyDown (KeyCode.W)) {
 			health.CurrentVal += 10;
+		}
+		if (health.CurrentVal <= 0) {
+			GameOver.gameObject.SetActive (true);
 		}
 	}
 

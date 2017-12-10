@@ -17,6 +17,6 @@ public class Crossheir : MonoBehaviour {
 
 		target.transform.position = new Vector3 (pos.x, pos.y, -9);
 
-		Cursor.visible = false;
+		//Cursor.visible = false;
 	}
 }
