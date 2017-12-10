@@ -23,6 +23,7 @@ public class Player : MonoBehaviour {
 		}
 		if (health.CurrentVal <= 0) {
 			GameOver.gameObject.SetActive (true);
+            //must stop animation
 		}
 	}
 
