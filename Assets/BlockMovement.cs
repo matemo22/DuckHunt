@@ -47,12 +47,15 @@ public class BlockMovement : MonoBehaviour {
 	}
 
 	void OnMouseOver() {
-		if (Input.GetMouseButtonDown (0)) 
-		{
-			//player.GetComponent<Player> ().getHealed ();
-			Explode ();
-			Destroy (gameObject);
-		} 
+		if (GameObject.Find ("Game").GetComponent<Game> ().canShoot) {
+			if (Input.GetMouseButtonDown (0)) {
+				//player.GetComponent<Player> ().getHealed ();
+				Explode ();
+				Destroy (gameObject);
+			} 
+		} else {
+			print ("Peluru Habis");
+		}
 	}
 
 	void Explode()

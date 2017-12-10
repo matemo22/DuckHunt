@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 	[SerializeField]
-	private Stat health;
+	public Stat health;
 	[SerializeField]
 	private GameObject GameOver;
 

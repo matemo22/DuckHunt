@@ -32,14 +32,19 @@ public class ItemMovement : MonoBehaviour {
 
 	void OnMouseDown()
 	{
-		GameObject.Find ("Player").GetComponent<Player> ().getAmmo ();
+		if (GameObject.Find ("Game").GetComponent<Game> ().canShoot) {
+			GameObject.Find ("Player").GetComponent<Player> ().getAmmo ();
+			Destroy (gameObject);
+		} else {
+			print ("Peluru Habis");
+		}
 	}
 
 	void OnMouseOver() {
 		if (Input.GetMouseButtonDown (0)) 
 		{
 			//player.GetComponent<Player> ().getHealed ();
-			Destroy (gameObject);
+			//Destroy (gameObject);
 		} 
 	}
 }

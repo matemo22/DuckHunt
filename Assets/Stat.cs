@@ -58,7 +58,7 @@ public class Stat
 
 		set 
 		{
-			this.currentAmmo = value;
+			this.currentAmmo = Mathf.Clamp(value, 0, 100);
 			ammo.Value = currentAmmo;
 		}
 	}
